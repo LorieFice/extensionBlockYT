@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "blockYT",
+  "version": "0.1",
+  "content_scripts" : [
+    {
+      "matches": [
+        "*://www.youtube.com/"
+      ],
+      "js": ["content.js"],
+      "run_at":"document_idle"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_title": "Thibault > all"
+  }
+}
